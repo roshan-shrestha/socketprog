@@ -7,13 +7,12 @@ public class Server {
 	{
 		try 
 		{
+			// This will open the port 3000 
 			ServerSocket server = new ServerSocket(3000);
 			Socket s = server.accept();
 			
 			System.out.println("Connected - server");
-			
-			
-			
+				
 			DataOutputStream dos = new DataOutputStream(s.getOutputStream());
 			dos.writeUTF("Welcome to Socket!");
 			
